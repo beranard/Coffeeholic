@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("https://img.freepik.com/free-photo/coffee-beans-top-view-white-background-space-text_176474-5028.jpg?w=2000");
+      background-size: cover;
+      background-position: center;
+    }
+
+
+    h1, h2 {
+      color: #333;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .product {
+      width: calc(33.33% - 20px);
+      margin: 10px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+
+    .product h3, .product p {
+      margin: 5px 0;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .order-summary {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+    }
+
+    .order-summary h3 {
+      margin-top: 0;
+    }
+
+    .order-summary p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome Coffeeholic!</h1>
+
+    <h2>Products</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://cdn.shopify.com/s/files/1/0405/8411/8424/products/Beans-Ampucao_3.jpg?v=1665382715" alt="Product 1">
+        <h3>Ampucao Benguet</h3>
+        <div class="price">₱500.00</div>
+        <input type="checkbox" name="products[]" value="Ampucao Benguet">
+<p>Well-loved for its idyllic landscape and cold weather, the province of Benguet can be found at the Cordillera region in the northern part of the Philippines.
+      A Single Coffee Origin from Benguet that has a well balanced flavor with notes of berries, chocolates and nuts.</p>
+<p>Ingredients: 100% Arabica </p>
+      <p>Coffee Varietal: Typica</p>
+      <p>Elevation: 1450 meters above sea level</p>
+      <p>Roast: Medium Roast</p>
+      <p>Flavor Profile: Well balanced with notes of berries, chocolates and nuts.</p>
+      <p>Body: Medium Bodied</p>
+      </div>
+
+      <div class="product">
+        <img src="https://cdn.shopify.com/s/files/1/0405/8411/8424/products/104001089_2682489458657669_2758987666542683483_n_900x.jpg?v=1599575066" alt="Product 2">
+        <h3>Caliking Atok Benguet</h3>
+        <div class="price">₱550.00</div>
+        <input type="checkbox" name="products[]" value="Caliking Atok Benguet">
+<p>Adopted Farm, in partnership with Kalsada Coffee. With this partnership and 14 farmer families, the Sitio Kisbong Milll was born. Over the years, as we built and developed our mills in Sitio Belis, we continued buying cherries from Kisbong and processed them in Belis</p>
+      <p>Ingredients: 100% Arabica </p>
+      <p>Medium Roast</p>
+      <p> Dark Chocolate nuts and calamansi</p>
+      <p>Body: Light</p>
+      <p>Acidity: High.</p>
+      <p>Complimentary Food Flavors: Fruits, chocolates, caramel and nutty</p>
+	<p>Size: 250g</p>
+      </div>
+
+      <div class="product">
+        <img src="https://cdn.shopify.com/s/files/1/0405/8411/8424/products/PhilippineCoffeeAtokBeans250g_900x.jpg?v=1665382837" alt="Product 3">
+        <h3>Atok Benguet</h3>
+        <div class="price">₱500.00</div>
+        <input type="checkbox" name="products[]" value="Atok Benguet">
+<p>Well-loved for its idyllic landscape and cold weather, the province of Benguet can be found in the Cordillera region in the northern part of the Philippines.</p>
+<p>Coffee Varietal: Typica / Bourbon</p>
+
+<p>Elevation: 1300 meters above sea level</p>
+
+<p>Roast: Medium Roast</p>
+
+<p>Flavor Profile: Well balanced with notes of berries, chocolates and nuts with a hint of winey flavor.</p>
+
+<p>Body: Light Bodied</p>
+
+<p>Acidity: High Acidity</p>
+
+<p>Size: 250g</p>
+
+      </div>
+
+      <div class="product">
+        <img src="https://cdn.shopify.com/s/files/1/0405/8411/8424/products/119069174_805139026915623_2538403697300824435_n_900x.jpg?v=1665382957" alt="Product 4">
+        <h3>Sagada</h3>
+        <div class="price">₱450.00</div>
+        <input type="checkbox" name="products[]" value="Sagada">
+ <p>Nestled in the center of the Cordillera region in the northern part of the Philippines, the town of Sagada is a popular destination for travelers who are either thrill seekers or nature lovers because of its majestic mountains and natural attractions.
+
+Sagada is also popular for their Single Coffee Origin that has a sweet, nutty and well balanced flavors of chocolates and fresh tobacco</p>
+
+<p>Ingredients: 100% Arabica</p>
+
+<p>Coffee Varietal: Typica / Red Bourbon</p>
+
+<p>Elevation: 1300 - 1400 meters above sea level</p>
+
+<p>Roast: Medium Roast</p>
+
+<p>Flavor Profile: Sweet, nutty and well balanced with hints of chocolates and fresh tobacco</p>
+
+<p>Body: Medium Bodied</p>
+
+<p>Acidity: Medium Acidity</p>
+
+<p>Size: 250g</p>
+      </div>
+
+      <div class="product">
+        <img src="https://cdn.shopify.com/s/files/1/0405/8411/8424/products/PhilippineCoffeeMt.MatutumBeans250g_360x.jpg?v=1665383066" alt="Product 5">
+        <h3>Mt. Matutum</h3>
+        <div class="price">₱400.00</div>
+        <input type="checkbox" name="products[]" value="Mt. Matutum">
+<p>Mt. Matutum is located in South Cotabato, in the Island of Mindanao, in the southern part of the Philippines. This majestic mountain is abundant with lush foliage, making the home of diverse plant and animal species – one of which is the Philippine Eagle.
+
+Mt. Matutum, South Cotabato also have a single coffee origin, specifically in Tupi, South Cotabato. Due to its lush foliage, coffee from the moutain has a berry-like and spicy note flavors</p>
+
+ <p>Ingredients: 100% Arabica
+
+ <p>Coffee Varietal: Mysore 
+
+ <p>Elevation: 800 - 1000 meters above sea level
+
+ <p>Roast: Medium Roast
+
+ <p>Flavor Profile: Berry-like and spicy with notes of cardamom and camphor
+
+ <p>Body: Medium Bodied
+
+ <p>Acidity: Medium Acidity
+
+ <p>Size: 250g</p>
+      </div>
+
+      <div class="product">
+        <img src="https://cdn.shopify.com/s/files/1/0405/8411/8424/products/PhilippineCoffeeMt.ApoBeans250g_360x.jpg?v=1665383184" alt="Product 6">
+        <h3>Mt. Apo</h3>
+        <div class="price">₱400.00</div>
+        <input type="checkbox" name="products[]" value="Mt. Apo">
+<p>At 2,954 meters (9,692 ft), Mount Apo is the highest mountain and volcano in the Philippines. It is one of the country's most popular climbing destinations. Also, in the mountain ranges of Mt. Apo, between North Cotabato and Davao del Sur, a single coffee origin bloomed that has a sweet and earthy flavor.</p>
+
+<p>Ingredients: 100% Arabica</p>
+
+<p>Coffee Varietal: Catimor</p>
+
+<p>Elevation: 1500 meters above sea level</p>
+
+<p>Roast: Medium Roast</p>
+
+<p>Flavor Profile: Sweet and Earthy</p>
+
+<p>Body: Medium Bodied</p>
+
+<p>Acidity: Low Acidity</p>
+
+<p>Size: 250g</p>
+      </div>
+
+      <div class="product">
+        <img src="https://cdn.shopify.com/s/files/1/0405/8411/8424/products/PhilippineCoffeeMt.KitangladBeans250g_360x.jpg?v=1665383255" alt="Product 7">
+        <h3>Mt. Kitanglad</h3>
+        <div class="price">₱450.00</div>
+        <input type="checkbox" name="products[]" value="Mt. Kitanglad">
+<p>Mt. Kitanglad is located in the province of Bukidnon in Mindanao Island. Showcasing various species of flora and fauna, which leads to have a light and nutty with <p>floral undertone flavors of its Single Origin Coffee.</p>
+
+<p>Ingredients: 100% Arabica</p>
+
+<p>Coffee Varietal: Catimor</p>
+
+<p>Elevation: 1200 meters above sea level</p>
+
+<p>Roast: Medium Roast</p>
+
+<p>Flavor Profile: Light and nutty with floral undertones</p>
+
+<p>Body: Light Bodied</p>
+
+<p>Acidity: High Acidity</p>
+
+<p>Size: 250g</p>
+      </div>
+
+      <div class="product">
+        <img src="https://cdn.shopify.com/s/files/1/0405/8411/8424/products/PhilippineCoffeeBarakoBeans250g_360x.jpg?v=1665382261" alt="Product 8">
+        <h3>Barako</h3>
+        <div class="price">₱500.00</div>
+        <input type="checkbox" name="products[]" value="Barako">
+<p>Barako is a local term that means, "tough man". Barako Coffee, which belongs to Coffea Liberica, is cultivated in the provinces of Batangas and Cavite.</p>
+
+<p>Ingredients: 100% Barako Beans</p>
+
+<p>Roast: Medium Roast</p>
+
+<p>Flavor Profile: Notes of spice and herbs</p>
+
+<p>Body: Medium</p>
+
+<p>Acidity: Medium</p>
+
+<p>Complimentary Food Flavors: Spices, nuts, fruits</p>
+
+<p>Size: 250g</p>
+      </div>
+
+      <div class="product">
+        <img src="https://cdn.shopify.com/s/files/1/0297/1792/1836/products/KahawaSugBeans-CPC-KSCMB_80358ab9-e8c5-4c47-b8fa-f0d31c48b804-287726.jpg?v=1637318239" alt="Product 9">
+        <h3>Kahawa Sug</h3>
+        <div class="price">₱350.00</div>
+        <input type="checkbox" name="products[]" value="Kahawa Sug">
+<p> a single-origin coffee varietal grown by the Tausug people of the Sulu Archipelago, Philippines. It is a robusta cultivar, belonging to the species Coffea canephora. It originates from robusta plants introduced to Sulu in the 1860s.</p>
+<p>Ingredients: 100% Arabica</p>
+
+<p>Coffee Varietal: Catimor</p>
+
+<p>Elevation: 1200 meters above sea level</p>
+
+<p>Roast: Medium Roast</p>
+
+<p>Flavor Profile: Light and nutty with floral undertones</p>
+
+<p>Body: Light Bodied</p>
+
+<p>Acidity: High Acidity</p>
+
+<p>Size: 250g</p>
+      </div>
+
+      <div class="product">
+        <img src="https://www.agriculture.com.ph/wp-content/uploads/2020/11/Featured-photo-The-Amigo-Coffee-is-a-social-enterprise-that-sources-coffee-from-locations-in-the-Philippines.-scaled.jpg" alt="Product 10">
+        <h3>Maramang Robusta Coffee</h3>
+        <div class="price">₱500.00</div>
+        <input type="checkbox" name="products[]" value="Bukidnon Tribal Robusta Coffee">
+<p>Eraya farms is in Bagong Silang of Maramag Bukidnon.  This is high elevation robusta and is considered one of the best tasting Robusta in the Philippines.   Eraya is a farm visited by both government and private sector to learn best practices in coffee farming.</p>
+ <p>Ingredients: 100% Arabica</p>
+
+<p>Coffee Varietal: Catimor</p>
+
+<p>Elevation: 1500 meters above sea level</p>
+
+<p>Roast: Medium Roast</p>
+
+<p>Flavor Profile: Sweet and Earthy</p>
+
+<p>Body: Medium Bodied</p>
+
+<p>Acidity: Low Acidity</p>
+
+<p>Size: 250g</p>
+      </div>
+    </div>
+
+    <h2>Customer Information</h2>
+    <form id="order-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <!-- Add more customer information fields as needed -->
+
+      <button type="submit">Place Order</button>
+      <br></br>
+      <div class="buttons">
+        <button onclick="goToProductPage()">Go to Product Page</button>
+        <button onclick="goToHomePage()">Go to Home Page</button>
+      </div>
+    </form>
+
+    <div class="order-summary" id="order-summary"></div>
+
+    <script>
+      function goToProductPage() {
+        window.location.href = "product-gallery.html";
+      }
+
+      function goToHomePage() {
+        window.location.href = "Home.html";
+      }
+
+      document.getElementById("order-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        submitOrder();
+      });
+
+      function submitOrder() {
+        // Retrieve selected products and customer information from the form
+        const form = document.getElementById("order-form");
+        const name = form.elements["name"].value;
+        const email = form.elements["email"].value;
+        const selectedProducts = [];
+
+        const productCheckboxes = document.querySelectorAll('input[name="products[]"]:checked');
+        for (let i = 0; i < productCheckboxes.length; i++) {
+          selectedProducts.push(productCheckboxes[i].value);
+        }
+
+        // Perform validation checks
+        if (!name || !email) {
+          alert("Error: Please provide your name and email.");
+          return;
+        }
+
+        if (selectedProducts.length === 0) {
+          alert("Error: Please select at least one product.");
+          return;
+        }
+
+        // Simulate order processing and compute the total amount
+        const totalAmount = calculateTotalAmount(selectedProducts);
+
+        // If the order is successfully placed, display the order summary
+        displayOrderSummary(name, email, selectedProducts, totalAmount);
+      }
+
+      function calculateTotalAmount(selectedProducts) {
+        // Define the prices for each product
+        const productPrices = {
+          "Ampucao Benguet": 500,
+          "Caliking Atok Benguet": 550,
+          "Atok Benguet": 500,
+          "Sagada": 450,
+          "Mt. Matutum": 400,
+          "Mt. Apo": 400,
+          "Mt. Kitanglad": 450,
+          "Barako": 500,
+          "Kahawa Sug": 350,
+          "Bukidnon Tribal Robusta Coffee": 500,
+        };
+
+        // Calculate the total amount
+        let total = 0;
+        for (let i = 0; i < selectedProducts.length; i++) {
+          const product = selectedProducts[i];
+          total += productPrices[product];
+        }
+
+        return total;
+      }
+
+      function displayOrderSummary(name, email, selectedProducts, totalAmount) {
+        const orderSummary = document.getElementById("order-summary");
+
+        // Clear previous order summary
+        orderSummary.innerHTML = "";
+
+        // Create elements to display the order summary
+        const heading = document.createElement("h3");
+        heading.textContent = "Order Summary";
+
+        const customerInfo = document.createElement("p");
+        customerInfo.innerHTML = "<strong>Name:</strong> " + name + "<br><strong>Email:</strong> " + email;
+
+        const productList = document.createElement("p");
+        productList.innerHTML = "<strong>Selected Products:</strong><br>" + selectedProducts.join("<br>");
+
+        const total = document.createElement("p");
+        total.innerHTML = "<strong>Total Amount:</strong> ₱" + totalAmount.toFixed(2);
+
+        // Append the elements to the order summary div
+        orderSummary.appendChild(heading);
+        orderSummary.appendChild(customerInfo);
+        orderSummary.appendChild(productList);
+        orderSummary.appendChild(total);
+      }
+    </script>
+  </div>
+</body>
+</html>
